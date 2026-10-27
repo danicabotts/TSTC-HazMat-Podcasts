@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mastering Hazardous Materials Transportation Rules – audio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;color-scheme:light}
+html,body{margin:0;padding:0;background:transparent;overflow:hidden}
+body{padding:1px;font-family:var(--body)}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+
+.hp{--hp-accent:#c8471f;--hp-accent-dk:#a93a17;--hp-ink:#22262a;--hp-soft:#6b6259;--hp-line:#e6e0d9;--hp-tint:#f7f4f0;--hp-rest:#d6d1cb;--hp-hover:#e6a58f;
+  position:relative;font-family:var(--body);-webkit-font-smoothing:antialiased;color:var(--hp-ink);
+  background:#fff;border:1px solid var(--hp-line);border-radius:12px;overflow:hidden;
+  display:grid;grid-template-columns:236px minmax(0,1fr);height:124px}
+.hpc{container-type:inline-size;min-width:0}
+.hp button,.hp select{font:inherit;color:inherit}
+.hp button{cursor:pointer;border:0;background:none;padding:0;display:inline-grid;place-items:center}
+.hp button:focus-visible,.hp .wf:focus-visible,.hp select:focus-visible{outline:2px solid var(--hp-accent);outline-offset:2px;border-radius:4px}
+.hp svg{display:block}
+.hp .i-pause{display:none}
+.hp[data-playing="1"] .i-play{display:none}
+.hp[data-playing="1"] .i-pause{display:block}
+.tnum{font-variant-numeric:tabular-nums}
+
+.hp .list{background:var(--hp-tint);border-right:1px solid var(--hp-line);display:flex;flex-direction:column;min-height:0}
+.hp .list h4{margin:0;padding:9px 14px 4px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--hp-soft);display:flex;justify-content:space-between}
+.hp .rows{overflow-y:auto;flex:1;min-height:0;padding:0 6px 6px;scrollbar-width:thin;scrollbar-color:#d6cfc7 transparent}
+.hp .row{width:100%;display:grid!important;grid-template-columns:36px minmax(0,1fr);gap:4px;text-align:left;padding:4px 8px!important;border-radius:5px;font-size:12.5px;line-height:1.35;color:#4b443d;place-items:center start!important}
+.hp .row:hover{background:#efe9e3}
+.hp .row .t{font-size:11px;color:#9a8f84}
+.hp .row .n{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%}
+.hp .row.on{background:#fbe6de;color:var(--hp-accent-dk);font-weight:700}
+.hp .row.on .t{color:var(--hp-accent)}
+
+.hp .main{padding:12px 16px 10px;display:grid;grid-template-rows:auto 1fr auto;gap:7px;min-width:0}
+.hp .head{display:flex;align-items:center;gap:12px;min-width:0}
+.hp .play{flex:none;width:40px;height:40px;border-radius:50%;background:var(--hp-accent);color:#fff;box-shadow:0 3px 10px rgba(200,71,31,.3)}
+.hp .play:hover{background:var(--hp-accent-dk)}
+.hp .meta{min-width:0;flex:1;display:grid}
+.hp .title{font-weight:800;font-size:15.5px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hp .chap{font-size:12.5px;color:var(--hp-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hp .pick{display:none;appearance:none;-webkit-appearance:none;border:0;background:transparent;font-size:12.5px;color:var(--hp-soft);padding:0 16px 0 0;width:100%;min-width:0;max-width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,var(--hp-soft) 50%),linear-gradient(135deg,var(--hp-soft) 50%,transparent 50%);background-position:calc(100% - 7px) 55%,calc(100% - 3px) 55%;background-size:4px 4px;background-repeat:no-repeat}
+.hp .right{display:flex;align-items:center;gap:6px;flex:none}
+.hp .time{font-size:12px;color:var(--hp-soft);margin-right:4px}
+.hp .ib{width:30px;height:30px;border-radius:50%;color:#5a524b}
+.hp .ib:hover{background:#f2ede8;color:var(--hp-ink)}
+.hp .speed{font-weight:700;font-size:12px;min-width:44px;height:26px;border-radius:13px;background:#f2ede8}
+.hp .speed:hover{background:#e9e1d9}
+.hp .wf{position:relative;cursor:pointer;touch-action:none;min-height:0;overflow:hidden}
+.hp .wf canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hp .segs{display:flex;gap:3px;height:4px}
+.hp .seg{position:relative;height:100%;background:#ece6df;border-radius:2px;overflow:hidden;padding:0!important;display:block!important}
+.hp .seg i{position:absolute;inset:0 auto 0 0;background:var(--hp-accent);width:0}
+
+/* Narrow: chapter list folds into a dropdown so the height never changes */
+@container (max-width:600px){
+  .hp{grid-template-columns:minmax(0,1fr)}
+  .hp .list,.hp .chap,.hp .skip{display:none}
+  .hp .pick{display:block}
+  .hp .main{padding:12px 14px 10px}
+}
+@container (max-width:380px){ .hp .time{display:none} }
+
+</style>
+</head>
+<body>
+<div class="hpc"><div class="hp" data-playing="0">
+  <div class="list"><h4><span>Chapters</span><span class="count tnum"></span></h4><div class="rows" role="list"></div></div>
+  <div class="main">
+    <div class="head">
+      <button class="play" aria-label="Play"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
+      <div class="meta"><div class="title">Mastering Hazardous Materials Transportation Rules</div><div class="chap" aria-live="off"></div><select class="pick" aria-label="Jump to chapter"></select></div>
+      <div class="right">
+        <span class="time tnum"><span data-cur>0:00</span> / <span data-dur>0:00</span></span>
+        <button class="ib skip" data-back aria-label="Back 15 seconds"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/><text x="12" y="16" font-size="7" font-weight="700" text-anchor="middle" font-family="sans-serif">15</text></svg></button>
+        <button class="ib skip" data-fwd aria-label="Forward 15 seconds"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V2l5 4-5 4V7a6 6 0 1 0 6 6h2a8 8 0 1 1-8-8z"/><text x="12" y="16" font-size="7" font-weight="700" text-anchor="middle" font-family="sans-serif">15</text></svg></button>
+        <button class="speed tnum" aria-label="Playback speed">1×</button>
+      </div>
+    </div>
+    <div class="wf" tabindex="0" role="slider" aria-label="Seek"><canvas></canvas></div>
+    <div class="segs" aria-hidden="true"></div>
+  </div>
+</div></div>
+<script>
+const AUDIO_SRC = "hazmat-audio.mp3";
+const DURATION = 406.4;
+const PEAKS = [0.8100000023841858,0.7400000095367432,0.8399999737739563,0.6100000143051147,0.4099999964237213,0.75,0.47999998927116394,0.4699999988079071,0.5099999904632568,0.4300000071525574,0.47999998927116394,0.4699999988079071,0.7200000286102295,0.33000001311302185,0.27000001072883606,0.6600000262260437,0.5799999833106995,0.3400000035762787,0.8299999833106995,0.7900000214576721,0.6800000071525574,0.800000011920929,0.7099999785423279,0.6600000262260437,0.46000000834465027,0.5199999809265137,0.6100000143051147,1.0,0.6299999952316284,0.6600000262260437,0.6299999952316284,0.5799999833106995,0.33000001311302185,0.41999998688697815,0.4699999988079071,0.23999999463558197,0.5099999904632568,1.0,0.800000011920929,0.7400000095367432,0.7400000095367432,0.75,0.6700000166893005,0.4099999964237213,0.5899999737739563,0.800000011920929,0.5699999928474426,0.7099999785423279,0.9100000262260437,0.17000000178813934,0.6299999952316284,0.6700000166893005,0.5400000214576721,0.8999999761581421,0.3400000035762787,0.30000001192092896,0.4399999976158142,0.3799999952316284,0.38999998569488525,0.3100000023841858,0.8899999856948853,0.9100000262260437,0.7200000286102295,0.6200000047683716,0.9100000262260437,0.7400000095367432,0.4699999988079071,0.5400000214576721,0.5400000214576721,0.6399999856948853,0.550000011920929,0.23999999463558197,0.46000000834465027,0.5099999904632568,0.25999999046325684,0.5,0.5199999809265137,0.8100000023841858,0.6100000143051147,0.9100000262260437,0.800000011920929,0.6000000238418579,0.5699999928474426,0.15000000596046448,0.6700000166893005,0.9200000166893005,0.7099999785423279,0.47999998927116394,0.550000011920929,0.3199999928474426,0.5,0.5099999904632568,0.6299999952316284,0.3499999940395355,0.6700000166893005,0.6499999761581421,0.5899999737739563,0.699999988079071,0.9100000262260437,0.4399999976158142,0.3400000035762787,0.46000000834465027,0.5400000214576721,0.47999998927116394,0.2800000011920929,0.550000011920929,0.7400000095367432,0.6000000238418579,0.3199999928474426,0.44999998807907104,0.7200000286102295,0.6600000262260437,0.5099999904632568,0.5699999928474426,0.7400000095367432,0.15000000596046448,0.5299999713897705,0.3499999940395355,0.25999999046325684,0.3199999928474426,0.15000000596046448,0.6800000071525574,0.7400000095367432,0.6000000238418579,0.6200000047683716,0.6700000166893005,0.7300000190734863,0.6200000047683716,0.6600000262260437,0.800000011920929,0.41999998688697815,0.41999998688697815,0.6000000238418579,0.5699999928474426,0.18000000715255737,0.3499999940395355,0.5400000214576721,0.15000000596046448,0.6100000143051147,0.2800000011920929,0.36000001430511475,0.6200000047683716,0.5199999809265137,0.4300000071525574,0.47999998927116394,0.36000001430511475,0.6299999952316284,0.46000000834465027,0.30000001192092896,0.4399999976158142,0.6299999952316284,0.15000000596046448,0.5,0.6299999952316284,0.8500000238418579,0.550000011920929,0.550000011920929,0.4399999976158142,0.5299999713897705,0.5600000023841858,0.6000000238418579,0.2800000011920929,0.9900000095367432,0.5400000214576721,0.4099999964237213,0.41999998688697815,0.15000000596046448,0.6000000238418579,0.5699999928474426,0.44999998807907104,0.5799999833106995,0.5600000023841858,0.46000000834465027,0.3499999940395355,0.4099999964237213,0.4300000071525574,0.27000001072883606,0.5299999713897705,0.3400000035762787,0.3199999928474426,0.3799999952316284,0.25,0.6399999856948853,0.6499999761581421,0.30000001192092896,0.5299999713897705,0.15000000596046448,0.28999999165534973,0.28999999165534973,1.0,0.3799999952316284,0.7900000214576721,0.4399999976158142,0.7099999785423279,0.4300000071525574,0.3799999952316284,0.41999998688697815,0.9599999785423279,0.5199999809265137,0.550000011920929,0.15000000596046448,0.5099999904632568,0.1899999976158142,0.5199999809265137,0.15000000596046448,0.7799999713897705,0.5600000023841858,0.6299999952316284,0.9300000071525574,0.5899999737739563,0.8299999833106995,0.4099999964237213,0.949999988079071,0.49000000953674316,0.38999998569488525,0.75,0.4099999964237213,0.46000000834465027,0.1599999964237213,0.3700000047683716,0.47999998927116394,0.800000011920929,0.5600000023841858,0.6899999976158142,0.6200000047683716,0.49000000953674316,0.7799999713897705,0.5,0.4300000071525574,0.75,0.7099999785423279,0.3499999940395355,0.4300000071525574,0.6499999761581421,0.4699999988079071,0.75,0.30000001192092896,0.7099999785423279,0.5,0.38999998569488525,0.6499999761581421,0.5199999809265137,0.4099999964237213,0.5600000023841858,0.4000000059604645,0.7599999904632568,0.47999998927116394,0.6499999761581421,0.3799999952316284,0.3700000047683716,0.38999998569488525,0.6100000143051147,0.15000000596046448,0.49000000953674316,0.44999998807907104,0.3700000047683716,0.7599999904632568,0.7099999785423279,0.5600000023841858,0.4699999988079071,0.17000000178813934,0.1899999976158142,0.4099999964237213,0.3400000035762787,0.25,0.6000000238418579,0.6800000071525574,0.6200000047683716,0.3700000047683716,0.8299999833106995,0.4399999976158142,0.6700000166893005,0.5699999928474426,0.6299999952316284,0.7300000190734863,0.6399999856948853,0.5099999904632568,0.5600000023841858,0.4099999964237213,0.33000001311302185,0.5099999904632568,0.3199999928474426,0.15000000596046448,0.38999998569488525,0.7900000214576721,0.7599999904632568,0.5,0.4699999988079071,0.5,0.20000000298023224,0.4699999988079071,0.47999998927116394,0.5199999809265137,0.4300000071525574,0.5799999833106995,0.44999998807907104,0.5,0.28999999165534973,0.3400000035762787,0.3499999940395355,0.5299999713897705,0.38999998569488525,0.800000011920929,0.38999998569488525,0.9100000262260437,0.6200000047683716,0.6800000071525574,0.44999998807907104,0.75,0.8299999833106995,0.41999998688697815,0.33000001311302185,0.5199999809265137,0.3100000023841858,0.4000000059604645,0.41999998688697815,0.5,0.23999999463558197,0.27000001072883606,0.5699999928474426,0.5199999809265137,0.6200000047683716,0.20000000298023224,0.4699999988079071,0.6000000238418579,0.550000011920929,0.15000000596046448,0.7900000214576721,0.6200000047683716,0.5199999809265137,0.3799999952316284,0.18000000715255737,0.38999998569488525,0.41999998688697815,0.1899999976158142,0.3799999952316284,0.8199999928474426,0.8100000023841858,0.5600000023841858,0.7200000286102295,0.49000000953674316,0.6700000166893005,0.30000001192092896,0.5099999904632568,0.25999999046325684,0.20999999344348907,0.5199999809265137,0.41999998688697815,0.7200000286102295,0.47999998927116394,0.4399999976158142,0.41999998688697815,0.6399999856948853,0.4300000071525574,0.4699999988079071,0.5799999833106995,0.4099999964237213,0.5799999833106995,0.4300000071525574,0.28999999165534973,0.2800000011920929,0.28999999165534973,0.5400000214576721,0.8500000238418579,0.4099999964237213,0.8700000047683716,0.7400000095367432,0.5299999713897705,0.5600000023841858,0.30000001192092896,0.3700000047683716,0.46000000834465027,0.4399999976158142,0.3700000047683716,0.2800000011920929,0.30000001192092896,0.5299999713897705,0.6899999976158142,0.5400000214576721,0.5400000214576721,0.6700000166893005,0.6800000071525574,0.6000000238418579,0.5400000214576721,0.8700000047683716,0.5099999904632568,0.8700000047683716,0.8600000143051147,0.4099999964237213,0.1599999964237213,0.4699999988079071,0.7099999785423279,0.5,0.33000001311302185,0.4399999976158142,0.5,0.4300000071525574,0.6800000071525574,0.15000000596046448,0.3499999940395355];
+const CHAPTERS = [{"t": 0, "title": "Intro: why hazmat rules matter"}, {"t": 61, "title": "The three goals of the regulations"}, {"t": 139, "title": "Shipper, carrier, and driver roles"}, {"t": 208, "title": "Placards, ID numbers, and hazard classes"}, {"t": 258, "title": "Labels and shipping papers"}, {"t": 295, "title": "When placards are required"}, {"t": 349, "title": "The hazmat endorsement and compliance"}, {"t": 380, "title": "Wrap-up"}];
+const SPEEDS = [1, 1.25, 1.5, 1.75, 2, 0.75];
+const players = [];
+const fmt = s => { s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+const chapAt = t => { let i = 0; CHAPTERS.forEach((c, k) => { if (t >= c.t) i = k; }); return i; };
+
+function makePlayer(root) {
+  const q = s => root.querySelector(s), qa = s => root.querySelectorAll(s);
+  const audio = new Audio(); audio.preload = "metadata"; audio.src = AUDIO_SRC;
+  const wf = q(".wf"), cv = wf.querySelector("canvas"), ctx = cv.getContext("2d");
+  const chapName = q(".chap"), rows = q(".rows"), segsEl = q(".segs"), pick = q(".pick");
+  let hoverT = null, raf = 0, speedIdx = 0, lastChap = -1;
+  const total = () => (isFinite(audio.duration) && audio.duration > 0 ? audio.duration : DURATION);
+  const setDur = () => qa("[data-dur]").forEach(e => e.textContent = fmt(total()));
+  setDur(); audio.addEventListener("loadedmetadata", setDur);
+  q(".count").textContent = CHAPTERS.length;
+
+  const items = CHAPTERS.map((c, i) => {
+    const b = document.createElement("button"); b.className = "row";
+    b.innerHTML = `<span class="t tnum">${fmt(c.t)}</span><span class="n"></span>`;
+    b.querySelector(".n").textContent = c.title;
+    b.setAttribute("aria-label", `Chapter ${i + 1}: ${c.title}, starts at ${fmt(c.t)}`);
+    b.addEventListener("click", () => { seek(c.t + 0.01); play(); });
+    rows.appendChild(b);
+    const o = document.createElement("option"); o.value = i; o.textContent = `Ch ${i + 1} of ${CHAPTERS.length} · ${c.title}`; pick.appendChild(o);
+    return b;
+  });
+  pick.addEventListener("change", () => { seek(CHAPTERS[+pick.value].t + 0.01); play(); });
+  const segs = CHAPTERS.map((c, i) => {
+    const end = i + 1 < CHAPTERS.length ? CHAPTERS[i + 1].t : DURATION;
+    const s = document.createElement("div"); s.className = "seg"; s.style.flex = String(end - c.t); s.innerHTML = "<i></i>";
+    segsEl.appendChild(s); return { fill: s.firstChild, start: c.t, end };
+  });
+
+  function syncChapter(force) {
+    const t = audio.currentTime, i = chapAt(t);
+    if (hoverT == null) chapName.textContent = `Chapter ${i + 1} of ${CHAPTERS.length} · ${CHAPTERS[i].title}`;
+    segs.forEach(s => s.fill.style.width = Math.min(100, Math.max(0, (t - s.start) / (s.end - s.start) * 100)) + "%");
+    if (i === lastChap && !force) return;
+    lastChap = i; pick.value = i;
+    items.forEach((b, k) => { b.classList.toggle("on", k === i); b.toggleAttribute("aria-current", k === i); });
+    const el = items[i];
+    if (rows.clientHeight) rows.scrollTo({ top: el.offsetTop - rows.offsetTop - 22, behavior: force ? "auto" : "smooth" });
+  }
+
+  function draw() {
+    const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+    if (!w || !h) return;
+    if (cv.width !== Math.round(w * dpr) || cv.height !== Math.round(h * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    const cs = getComputedStyle(root);
+    const cPlayed = cs.getPropertyValue("--hp-accent").trim(), cRest = cs.getPropertyValue("--hp-rest").trim(), cHover = cs.getPropertyValue("--hp-hover").trim();
+    const bar = 3, gap = 2, step = bar + gap, n = Math.max(1, Math.floor((w + gap) / step)), T = total();
+    const prog = audio.currentTime / T, hov = hoverT == null ? null : hoverT / T;
+    for (let i = 0; i < n; i++) {
+      const a = i / n, b = (i + 1) / n;
+      let p = 0; const s = Math.floor(a * PEAKS.length), e = Math.max(s + 1, Math.floor(b * PEAKS.length));
+      for (let k = s; k < e && k < PEAKS.length; k++) p = Math.max(p, PEAKS[k]);
+      const bh = Math.max(2, p * (h - 2)), x = i * step, y = (h - bh) / 2, mid = (a + b) / 2;
+      ctx.fillStyle = mid <= prog ? cPlayed : (hov != null && mid <= hov ? cHover : cRest);
+      if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(x, y, bar, bh, 1.5); ctx.fill(); } else ctx.fillRect(x, y, bar, bh);
+    }
+    if (hov != null) { ctx.fillStyle = cPlayed; ctx.fillRect(Math.round(hov * w) - 0.5, 0, 1, h); }
+  }
+  function tick() { qa("[data-cur]").forEach(e => e.textContent = fmt(audio.currentTime)); wf.setAttribute("aria-valuenow", Math.round(audio.currentTime)); wf.setAttribute("aria-valuetext", fmt(audio.currentTime)); syncChapter(); draw(); }
+  function loop() { tick(); if (!audio.paused) raf = requestAnimationFrame(loop); }
+  function seek(t) { audio.currentTime = Math.min(Math.max(0, t), total() - 0.2); tick(); }
+  function play() { players.forEach(p => p !== audio && p.pause()); audio.play().catch(() => {}); }
+  function toggle() { audio.paused ? play() : audio.pause(); }
+
+  const pb = q(".play");
+  audio.addEventListener("play", () => { root.dataset.playing = "1"; pb.setAttribute("aria-label", "Pause"); cancelAnimationFrame(raf); loop(); });
+  audio.addEventListener("pause", () => { root.dataset.playing = "0"; pb.setAttribute("aria-label", "Play"); tick(); });
+  audio.addEventListener("seeked", tick);
+  pb.addEventListener("click", toggle);
+  q("[data-back]").addEventListener("click", () => seek(audio.currentTime - 15));
+  q("[data-fwd]").addEventListener("click", () => seek(audio.currentTime + 15));
+  const sp = q(".speed");
+  sp.addEventListener("click", () => { speedIdx = (speedIdx + 1) % SPEEDS.length; audio.playbackRate = SPEEDS[speedIdx]; sp.textContent = SPEEDS[speedIdx] + "×"; sp.setAttribute("aria-label", "Playback speed " + SPEEDS[speedIdx] + " times"); });
+
+  const tAt = ev => { const r = wf.getBoundingClientRect(); return Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width)) * total(); };
+  let dragging = false;
+  wf.addEventListener("pointerdown", ev => { dragging = true; wf.setPointerCapture(ev.pointerId); seek(tAt(ev)); });
+  wf.addEventListener("pointermove", ev => {
+    const t = tAt(ev); if (dragging) seek(t);
+    if (ev.pointerType === "mouse") { hoverT = t; chapName.textContent = `Jump to ${fmt(t)} · ${CHAPTERS[chapAt(t)].title}`; draw(); }
+  });
+  wf.addEventListener("pointerup", () => { dragging = false; });
+  wf.addEventListener("pointerleave", () => { hoverT = null; syncChapter(true); draw(); });
+  wf.setAttribute("aria-valuemin", "0"); wf.setAttribute("aria-valuemax", String(Math.round(DURATION)));
+  wf.addEventListener("keydown", ev => {
+    const k = ev.key, t = audio.currentTime;
+    if (k === "ArrowRight") seek(t + 5); else if (k === "ArrowLeft") seek(t - 5);
+    else if (k === "Home") seek(0); else if (k === "End") seek(total());
+    else if (k === " " || k === "Enter") toggle(); else return;
+    ev.preventDefault();
+  });
+  new ResizeObserver(() => { draw(); syncChapter(true); }).observe(root);
+  players.push(audio);
+  syncChapter(true); draw();
+}
+document.querySelectorAll(".hp").forEach(makePlayer);
+</script>
+</body>
+</html>
